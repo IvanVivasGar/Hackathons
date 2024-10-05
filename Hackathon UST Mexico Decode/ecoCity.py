@@ -4,8 +4,8 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 
 # Ruta del archivo CSV
-csv_file_path = '/Users/ivanvivasgarcia/Documents/PortafolioPersonal/Hackathon UST Mexico Decode/datasets/Water Consumption 1st Sem 2019.csv'
-csv_file_path2 = '/Users/ivanvivasgarcia/Documents/PortafolioPersonal/Hackathon UST Mexico Decode/datasets/ciudadMXClima.csv'
+csv_file_path = '/Users/ivanvivasgarcia/Documents/PortafolioPersonal/Hackathons/Hackathon UST Mexico Decode/datasets/Water Consumption 1st Sem 2019.csv'
+csv_file_path2 = '/Users/ivanvivasgarcia/Documents/PortafolioPersonal/Hackathons/Hackathon UST Mexico Decode/datasets/ciudadMXClima.csv'
 
 # Leer el archivo CSV
 df = pd.read_csv(csv_file_path)
@@ -43,10 +43,6 @@ for colonia in colonias:
     # Imprimir los datos de entrenamiento y prueba
     print()
     print(f'Colonia: {colonia}')
-    print(f'Datos de entrenamiento (bimestres 1 y 2):')
-    print(df_train)
-    print(f'Dato de prueba (bimestre 3):')
-    print(df_test)
 
     # Realiza un merge de los DataFrames basándote en la columna de bimestre
     merged_train = pd.merge(df_train, df2, on='bimestre')

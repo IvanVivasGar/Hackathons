@@ -25,6 +25,12 @@ success_rates = []
 # Obtener la lista de colonias únicas
 colonias = df['colonia'].unique()
 
+# Obtener la lista de colonias únicas
+colonias = df['colonia'].unique()
+
+# Imprimir el número de colonias únicas
+print(f'Número de colonias únicas: {len(colonias)}')
+
 # Procesar cada colonia por separado
 for colonia in colonias:
     df_colonia = df[df['colonia'] == colonia]
